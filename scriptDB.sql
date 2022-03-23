@@ -1,29 +1,30 @@
-create database schoolApp;
+CREATE database schoolApp;
 use schoolApp;
-create table Questions(
-Id int not null auto_increment primary key,
-statement varchar(40) not null default 'descripción_pregunta',
-option_a boolean not null default false,
-opc_b boolean null default false,
-opc_c boolean null default false,
-opc_d boolean null default false,
-Question_value int not null default 0
-);
-create table exam (
-id bigint not null auto_increment primary key,
-score int not null default 0,
-questionQuantity int not null default 0,
-question_id int not null,
-constraint fk_question foreign key(question_id) references Question(Id)
+CREATE table Questions(
+Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+statement VARCHAR(40) NOT NULL default 'descripción_pregunta',
+option_a BOOLEAN NOT NULL default false,
+opc_b BOOLEAN NULL default false,
+opc_c BOOLEAN NULL default false,
+opc_d BOOLEAN NULL default false,
+Question_value INT NOT NULL default 0
 );
 
-create table student(
-id bigint not null auto_increment primary key,
-name varchar(30) not null default ' ',
-age int not null default 0,
-city varchar(50) not null default ' ',
-time_zone timestamp null,
-exam_id bigint not null,
-constraint fk_exame foreign key(exam_id) references exam(id),
-constraint chkedad check(edad >0)
+CREATE table exam (
+id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+score INT NOT NULL default 0,
+questionQuantity INT NOT NULL default 0,
+question_id INT NOT NULL,
+CONSTRAINT fk_question FOREIGN KEY(question_id) REFERENCES Question(Id)
+);
+
+CREATE table student(
+id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(30) NOT NULL default ' ',
+age INT NOT NULL default 0,
+city VARCHAR(50) NOT NULL default ' ',
+time_zone TIMESTAMP NULL,
+exam_id BIGINT NOT NULL,
+CONSTRAINT fk_exame FOREIGN KEY(exam_id) REFERENCES exam(id),
+CONSTRAINT chkedad CHECK(edad >0)
 );

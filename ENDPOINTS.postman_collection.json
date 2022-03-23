@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "a0052ea7-b098-4d09-a15f-27729c2f0acb",
+		"name": "Endpoints API fonYouApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/students-POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Carlos Garcia\",\r\n    \"age\":21,\r\n    \"city\":\"Caldas\",\r\n    \"time_zone\":-5,\r\n    \"exam_id\":0\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/examenes-POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":30\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":34\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":20\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/exmanes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"exmanes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/preguntas-POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/preguntas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"preguntas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/preguntas-PUT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/preguntas/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"preguntas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/preguntas-DEL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/preguntas/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"preguntas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/preguntas-DEL All",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/preguntas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"preguntas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/examenes-PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":20\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":30\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":34\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/exmanes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"exmanes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/examenes-DEL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/exmanes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"exmanes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/examenes-DEL  All",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/exmanes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"exmanes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/students-DEL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/students-DEL  All",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/students-PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"estudiante1\",\r\n    \"edad\":21,\r\n    \"ciudad\":\"Palmira\",\r\n    \"zona_horaria\":-5,\r\n    \"id_examen\":0\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
