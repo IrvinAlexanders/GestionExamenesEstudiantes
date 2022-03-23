@@ -37,7 +37,7 @@
 			"response": []
 		},
 		{
-			"name": "api/examenes-POST",
+			"name": "api/exams-POST",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -49,10 +49,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":30\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":34\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":20\r\n        }\r\n    ]\r\n}"
+					"raw": "{\r\n    \"score\":100,\r\n    \"questions\":[\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":30\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 2\",\r\n            \"option_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":34\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 3\",\r\n            \"option_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false,\r\n            \"question_value\":20\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/exmanes/",
+					"raw": "http://localhost:9000/api/exams/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -60,7 +60,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"exmanes",
+						"exms",
 						""
 					]
 				}
@@ -68,7 +68,7 @@
 			"response": []
 		},
 		{
-			"name": "api/preguntas-POST",
+			"name": "api/questions-POST",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -80,10 +80,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+					"raw": "\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":10\r\n        }"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/preguntas/",
+					"raw": "http://localhost:9000/api/questions/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -91,7 +91,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"preguntas",
+						"questions",
 						""
 					]
 				}
@@ -99,7 +99,7 @@
 			"response": []
 		},
 		{
-			"name": "api/preguntas-PUT",
+			"name": "api/questions-PUT",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -111,10 +111,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+					"raw": "\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":10\r\n        }"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/preguntas/2",
+					"raw": "http://localhost:9000/api/questions/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -122,7 +122,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"preguntas",
+						"questions",
 						"2"
 					]
 				}
@@ -130,7 +130,7 @@
 			"response": []
 		},
 		{
-			"name": "api/preguntas-DEL",
+			"name": "api/questions-DEL",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -143,10 +143,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+					"raw": "\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":10\r\n        }"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/preguntas/2",
+					"raw": "http://localhost:9000/api/questions/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -154,7 +154,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"preguntas",
+						"questions",
 						"2"
 					]
 				}
@@ -162,7 +162,7 @@
 			"response": []
 		},
 		{
-			"name": "api/preguntas-DEL All",
+			"name": "api/questions-DEL All",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -175,10 +175,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":10\r\n        }"
+					"raw": "\r\n        {\r\n            \"statemenet\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":10\r\n        }"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/preguntas",
+					"raw": "http://localhost:9000/api/questions",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -186,14 +186,14 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"preguntas"
+						"questions"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "api/examenes-PUT",
+			"name": "api/exams-PUT",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -205,10 +205,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":20\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":30\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false,\r\n            \"valor_pregunta\":34\r\n        }\r\n    ]\r\n}"
+					"raw": "{\r\n    \"score\":100,\r\n    \"questions\":[\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":20\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 2\",\r\n            \"option_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false,\r\n            \"question_value\":30\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 3\",\r\n            \"option_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false,\r\n            \"question_value\":34\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/exmanes/1",
+					"raw": "http://localhost:9000/api/exms/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -216,7 +216,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"exmanes",
+						"exams",
 						"1"
 					]
 				}
@@ -224,7 +224,7 @@
 			"response": []
 		},
 		{
-			"name": "api/examenes-DEL",
+			"name": "api/exams-DEL",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -237,10 +237,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false\r\n        }\r\n    ]\r\n}"
+					"raw": "{\r\n    \"score\":100,\r\n    \"question\":[\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 2\",\r\n            \"option_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 3\",\r\n            \"option_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/exmanes/1",
+					"raw": "http://localhost:9000/api/exams/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -248,7 +248,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"exmanes",
+						"exams",
 						"1"
 					]
 				}
@@ -256,7 +256,7 @@
 			"response": []
 		},
 		{
-			"name": "api/examenes-DEL  All",
+			"name": "api/exams-DEL  All",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -269,10 +269,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"puntaje\":100,\r\n    \"preguntas\":[\r\n        {\r\n            \"enunciado\":\"Pregunta 1\",\r\n            \"opc_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 2\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"enunciado\":\"Pregunta 3\",\r\n            \"opc_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false\r\n        }\r\n    ]\r\n}"
+					"raw": "{\r\n    \"score\":100,\r\n    \"questions\":[\r\n        {\r\n            \"statement\":\"Pregunta 1\",\r\n            \"option_a\":true,\r\n            \"opc_b\":false,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 2\",\r\n            \"option_a\":false,\r\n            \"opc_b\":true,\r\n            \"opc_c\":false,\r\n            \"opc_d\":false\r\n        },\r\n                {\r\n            \"statement\":\"Pregunta 3\",\r\n            \"option_a\":false,\r\n            \"opc_b\":false,\r\n            \"opc_c\":true,\r\n            \"opc_d\":false\r\n        }\r\n    ]\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/api/exmanes",
+					"raw": "http://localhost:9000/api/exams",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -280,7 +280,7 @@
 					"port": "9000",
 					"path": [
 						"api",
-						"exmanes"
+						"exams"
 					]
 				}
 			},
@@ -362,7 +362,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"estudiante1\",\r\n    \"edad\":21,\r\n    \"ciudad\":\"Palmira\",\r\n    \"zona_horaria\":-5,\r\n    \"id_examen\":0\r\n}"
+					"raw": "{\r\n    \"name\":\"Carlos Garcia\",\r\n    \"age\":21,\r\n    \"city\":\"Caldas\",\r\n    \"time_zone\":-5,\r\n    \"exam_id\":0\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:9000/api/students/1",
